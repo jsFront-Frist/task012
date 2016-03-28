@@ -31,43 +31,43 @@
 				clear: both;
 			}
 			.bg {
-				width: 1200px;
+				width: 1600px;
 				position: absolute;
+				
+			}
+			.sliderShow:not(:hover) .bg {
+				animation: slider-auto 20s linear infinite;
+			}
+			@-webkit-keyframes slider-auto{
+				from{
+					left: 0px;
+				}
+				to{
+					left: -1200px;
+				}
 			}
 			.bg>div {
 				width: 400px;
 				height: 400px;
-				position: absolute;
+				float: left;
+				position: relative;
 			}
-			.bg>div:target {
-				animation:slider 1.5s linear;
-				z-index: 4!important;
-				
-			}
-			@-webkit-keyframes slider{
-				from {
-					left: -400px;
-				}
-				to {
-					left: 0px;
-				}
-			}
-			#first {
+			
+			#first,
+			#forth {
 				background-color: pink;
-				z-index: 1;
 			}
 			#second {
 				background-color: yellow;
-				z-index: 2;
+			
 			}
 			#third {
 				background-color: blue;
-				z-index: 0;
 			}
 			.banner {
-				position: absolute;
+				position: fixed;
 				bottom: 0px;
-				right: 0px;
+				left: 0px;
 				z-index: 99;
 				background-color: rgba(255,255,255,0.6);
 			}
