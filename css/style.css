@@ -1,0 +1,76 @@
+/*表格*/
+			thead th {
+				background-color: black;
+				color: white;
+			}
+			.info tr:nth-child(odd) {
+				background-color: gray;
+			}
+			.info tr:nth-child(1),
+			.info tr:nth-child(2),
+			.info tr:nth-child(3) {
+				color: red;
+			}
+			/*输入框*/
+			#name {
+				width: 200px;
+			}
+			#name:focus {
+				width: 300px;
+			}
+			/*轮播*/
+			.sliderShow {
+				width: 400px;
+				height: 400px;
+				overflow: hidden;
+				position: absolute;
+			}
+			.bg:after {
+				content: ' ';
+				display: block;
+				clear: both;
+			}
+			.bg {
+				width: 1200px;
+				position: absolute;
+			}
+			.bg>div {
+				width: 400px;
+				height: 400px;
+				position: absolute;
+			}
+			.bg>div:target {
+				animation:slider 1.5s linear;
+				z-index: 4!important;
+				
+			}
+			@-webkit-keyframes slider{
+				from {
+					left: -400px;
+				}
+				to {
+					left: 0px;
+				}
+			}
+			#first {
+				background-color: pink;
+				z-index: 1;
+			}
+			#second {
+				background-color: yellow;
+				z-index: 2;
+			}
+			#third {
+				background-color: blue;
+				z-index: 0;
+			}
+			.banner {
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+				z-index: 99;
+				background-color: rgba(255,255,255,0.6);
+			}
+			.banner a {
+				text-decoration: none;
+			}
